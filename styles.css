@@ -1,0 +1,304 @@
+/* @import url('https://fonts.googleapis.com/css?family=Syne%20Mono:700|Syne%20Mono:400'); */
+@import url('https://fonts.googleapis.com/css?family=Offside:700|Offside:400');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900');
+
+body {
+    /* font-family: 'Offside'; */
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+:root,
+html[data-theme="light"] {
+    --text: #2F2F2F;
+    --background: hsl(15, 25%, 97%);
+    --primary: hsl(10, 26%, 54%);
+    --secondary: hsl(161, 26%, 72%);
+    --accent: hsl(214, 26%, 64%);
+    --mustard: #FFE793;
+    --darkgray: #2F2F2F;
+}
+
+html[data-theme="dark"] {
+    --text: hsl(7, 27%, 94%);
+    --background: hsl(15, 25%, 3%);
+    --primary: hsl(10, 26%, 46%);
+    --secondary: hsl(161, 26%, 28%);
+    --accent: hsl(214, 26%, 36%);
+}
+
+
+html {
+    font-size: 100%;
+}
+
+/* 16px */
+
+
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+    max-width: 100vw;
+}
+
+
+/*============== HEADER ==============*/
+.home__header {
+    height: 100vh;
+}
+
+.home__header .home__nav {
+    position: fixed;
+    background-color: var(--background);
+    line-height: 30px;
+    width: 100%;
+    border-bottom: 5px solid var(--accent);
+    display: flex;
+    justify-content: space-between;
+    transition : all 0.3s;
+}
+
+/*============== BUTTON BORDER ==============*/
+/* .container {
+    max-width : 1280px;
+    margin : 0 auto;
+} */
+
+/* .container .home__nav {
+    width : 1280px;
+} */
+/*============== END BUTTON BORDER ==============*/
+
+
+/*============== SCROLL PAGE - CHANGE MENU ==============*/
+.home__header .home__nav.scroll {
+    left:50%;
+    transform: translate(-50%);
+    width: fit-content;
+    border-bottom: 2px solid var(--accent);
+    line-height: 0;
+    transition : all 0.3s;
+}
+
+.home__header .home__nav.scroll ul li a{
+    padding : 12px;
+}
+
+.home__header .home__nav.scroll .home__switch {
+    padding : 12px;
+    margin-left : 5em;
+}
+/*============== END SCROLL PAGE - CHANGE MENU ==============*/
+
+
+
+.home__header .home__nav ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.home__header .home__nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    border: 1px solid var(--accent);
+    border-left: none;
+    border-right: 1px solid var(--accent);
+    border-top: none;
+    position: relative;
+    /* z-index: 1; */
+    overflow: hidden;
+    cursor: pointer;
+}
+.home__header .home__nav ul li:first-of-type {
+    border-top: none;
+}
+.home__header .home__nav ul li:last-of-type {
+    border-bottom: none;
+}
+.home__header .home__nav ul li:not(:last-of-type) {
+    border-bottom: none;
+}
+
+.home__header .home__nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 15px 22px;
+    text-decoration: none;
+    color: var(--darkgray);
+    text-transform: capitalize
+}
+
+/*============== HOVER MENU ==============*/
+.home__header .home__nav ul li a:hover:before,
+.home__header .home__nav ul li a.active:before {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+}
+.home__header .home__nav ul li a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--mustard);
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+/*============== END HOVER MENU ==============*/
+
+
+/*============== DARK LIGHT BUTTON ==============*/
+.home__header .home__nav .home__switch {
+    padding: 15px 22px;
+    border-left: 1px solid var(--accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.home__header .home__nav .home__switch ion-icon {
+    margin-right: 10px
+}
+/*============== END DARK LIGHT BUTTON ==============*/
+
+
+/*============== HOME TITLE ==============*/
+.home__header .home__description {
+    height: 100%;
+    background-color: var(--secondary);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Offside';
+}
+.home__header .home__description h1 {
+    color: var(--secondary);
+    font-size: clamp(2.5rem, 3vw + 1rem, 3.5rem);
+    -webkit-text-stroke: 3pt var(--text);
+}
+.home__header .home__description h1 span {
+    margin-left: 10px;
+    -webkit-text-stroke: 3pt var(--accent);
+}
+.home__header .home__description h3 {
+    margin-top : 2.5em; 
+}
+/*============== END HOME TITLE ==============*/
+
+
+
+/*============== SECTIONS AFTER HOME ==============*/
+
+main {
+
+}
+
+main section {
+    margin-top : 4em;
+}
+
+section .section__title {
+    padding : 8em 0;
+    position: relative;
+    /* border-top : 1px solid var(--darkgray); */
+    /* border-bottom : 1px solid var(--darkgray); */
+}
+
+section .section__title::before, section .section__title::after {
+    content : '';
+    position: absolute;
+    width : 100%;
+    height : 1px;
+    background: linear-gradient(to left,#eee 10%, #333 50%, #eee 90%);
+}
+
+section .section__title::before {
+    top : 0;
+}
+
+section .section__title::after {
+    bottom : 0;
+}
+
+section .section__title h2 {
+    position: relative;
+    margin-bottom: 50px;
+    font-weight: 300;
+    color: var(--primary);
+    font-size : 40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 5px 0 5px;
+    color: #5b5963;
+    text-align: center;
+}
+
+section .section__title h2 span {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        right : 0;
+        text-align: center;
+        top: -40px;
+        z-index: 0;
+        opacity: 0.075;
+}
+
+section .section__smallTitle {
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid var(--darkgray);
+    border-top : none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color : var(--darkgray)
+}
+
+section .section__smallTitle ion-icon{
+    margin-left : 10px;
+}
+
+
+
+.projet__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2rem .33fr .33fr .33fr .33fr;
+    grid-template-rows: auto 1fr 2rem .5fr 1fr;
+}
+
+.projet__wraper .projet__item {
+
+}
