@@ -3,16 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <!-- <link rel="stylesheet" href="pointer.css"> -->
 </head>
 
 <body>
+    <!------------ Container 1280px ------------>
     <div class="container">
+        <!------------ Header Home Page ------------>
         <header class="home__header">
-            <nav class="home__nav">
+            <!------------ Nav ------------>
+            <nav class="home__nav hide__mobile">
                 <ul>
                     <li>
                         <a class="name-page active" href="#home">
@@ -56,27 +59,264 @@
                     <p>Mode</p>
                 </div>
             </nav>
-            <!-- <div class="home__background hide__mobile"></div> -->
-            <section class="home__description">
+            <!------------ End Nav ------------>
+            <!------------ Title Home Page ------------>
+            <section class="home__description" id="home">
                 <h2>Florian Becquet</h2>
-                <h1>Développeur Full-Stack<span>.</span></h1>
+                <h1>Développeur Full&nbsp;-&nbsp;Stack<span>.</span></h1>
                 <h3>A la recherche d'une alternance dans ce domaine</h3>
             </section>
+            <!------------ End Title Home Page ------------>
         </header>
+        <!------------ End Header Home Page ------------>
+
+
+        <!------------ Main ------------>
         <main>
+            <!------------ Projet Section ------------>
             <section class="" id="projets">
+                <!------------ Titles For Every Sections ------------>
+                <div class="section__title">
+                    <h2>Mes projets<span>Portfolio</span></h2>
+                </div>
+                <div class="section__smallTitle" href="#">En construction</div>
+                <!------------ End Titles For Every Sections ------------>
+                <article class="projet__wrapper">
+                    <!------------ Projets Items ------------>
+                    <div class="projet__item">
+                        <div class="projet__img">
+                            <img src="Hello-rafiki.svg" />
+                            <figcaption data-content="TODOList">TODO LIST</figcaption>
+                        </div>
+                        <div class="projet__description">
+                            <p><span>Statut:</span> En cours</p>
+                            <p><span>Rôle:</span> Développeur Web</p>
+                            <span>Technos:</span>
+                            <ul>
+                                <li>React</li>
+                                <li>React</li>
+                                <li>React</li>
+                            </ul>
+                            <p class="demo">Démo <ion-icon name="arrow-forward-outline"></ion-icon></p>
+                        </div>
+                    </div>
+                    <div class="projet__item">
+                        <div class="projet__img">
+                            <img src="Hello-rafiki.svg" />
+                            <figcaption data-content="TODOList">TODO LIST</figcaption>
+                        </div>
+                        <div class="projet__description">
+                            <p><span>Statut:</span>En cours</p>
+                            <p><span>Rôle:</span>Développeur Web</p>
+                            <span>Technos:</span>
+                            <ul>
+                                <li>React</li>
+                                <li>React</li>
+                                <li>React</li>
+                            </ul>
+                            <p class="demo">Démo <ion-icon name="arrow-forward-outline"></ion-icon></p>
+                        </div>
+                    </div>
+                    <!------------ End Projets Items ------------>
+                </article>
+            </section>
+            <!------------ End Projet Section ------------>
+
+
+
+            <!------------ About Section ------------>
+            <section class="" id="about">
+
                 <div class="section__title">
                     <h2>Présentation<span>Qui suis-je ?</span></h2>
                 </div>
-                <a class="section__smallTitle" href="#">M'envoyer un message <ion-icon name="arrow-forward-outline"></ion-icon></a>
-                <div class="projet__wrapper">
-                    <div class="projet__item">
-                        
+                <a class="section__smallTitle" href="#">M'envoyer un message <ion-icon
+                        name="arrow-forward-outline"></ion-icon></a>
+                <article class="presentation__wrapper">
+                    <!------------ Presentation ------------>
+                    <div class="presentation__globale">
+                        <p>Je suis Florian, <strong class="noStyle"><i class="noStyle">Développeur Web
+                                    Junior</i></strong> et c'est ici que je vous parle de mon parcours.</p>
+                        <hr />
+                        <p> J'ai suivi une formation &nbsp;<strong
+                                class="yesStyle"><i>Développement&nbsp;Web&nbsp;et&nbsp;Web&nbsp;Mobile</i></strong>,
+                            acquérant des
+                            compétences en <strong class="noStyle"><i class="noStyle">HTML, CSS, JavaScript et
+                                    PHP</i></strong>. J'ai participé au développement de 3
+                            différentes
+                            applications au cours de mes formations et stages, en partant pour chacune de zéro.
+                            Suite à
+                            cette
+                            formation, je continue de me former sur <strong
+                                class="yesStyle"><i>React&nbsp;et&nbsp;NodeJS</i></strong> par
+                            exemple afin de devenir Développeur FullStack JavaScript.
+                        </p>
+                        <hr />
+                        <p> Veillant toujours à en apprendre davantage dans ce domaine,
+                            je
+                            suis actuellement à
+                            la recherche d'un <strong
+                                class="yesStyle"><i>poste&nbsp;en&nbsp;tant&nbsp;que&nbsp;Développeur&nbsp;Web</i></strong>.
+                        </p>
+                    </div>
+                    <!------------ End Presentation ------------>
+                </article>
+            </section>
+            <!------------ End About Section ------------>
+
+
+
+            <!------------ Parcours Section ------------>
+            <section class="" id="parcours">
+                <div class="section__title">
+                    <h2>Qualifications<span>Mon&nbsp;parcours</span></h2>
+                </div>
+                <a class="section__smallTitle" href="#">Télécharger mon CV en PDF <ion-icon
+                        name="arrow-forward-outline"></ion-icon></a>
+                <article class="parcours__wrapper">
+                    <!------------ Parcours ------------>
+                    <div class="parcours__item">
+                        <h3> <ion-icon name="school"></ion-icon> Formations </h3>
+                        <div class="parcours__info">
+                            <h3>LaCapsule - 3 mois</h3>
+                            <p>Développeur Web et Web Mobile</p>
+                            <div class="parcours__timeline">
+                                <span><ion-icon name="calendar"></ion-icon> 2021</span>
+                                <ion-icon name="arrow-down"></ion-icon>
+                            </div>
+                            <div class="parcours__more">
+                                <ul class="parcours__techno">
+                                    <li>React</li>
+                                    <li>React</li>
+                                    <li>React</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="parcours__info">
+                            <h3>AFPA - 9 mois</h3>
+                            <p>Développeur Web et Web Mobile</p>
+                            <div class="parcours__timeline">
+                                <span><ion-icon name="calendar"></ion-icon> 2021</span>
+                                <ion-icon name="arrow-down"></ion-icon>
+                            </div>
+                            <div class="parcours__more">
+                                <ul class="parcours__techno">
+                                    <li>React</li>
+                                    <li>React</li>
+                                    <li>React</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="parcours__info">
+                            <h3>M2i - 3 mois</h3>
+                            <p>Développeur Web et Web Mobile</p>
+                            <div class="parcours__timeline">
+                                <span><ion-icon name="calendar"></ion-icon> 2021</span>
+                                <ion-icon name="arrow-down"></ion-icon>
+                            </div>
+                            <div class="parcours__more">
+                                <ul class="parcours__techno">
+                                    <li>React</li>
+                                    <li>React</li>
+                                    <li>React</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="parcours__item">
+                        <h3> <ion-icon name="school"></ion-icon> Expériences </h3>
+                        <div class="parcours__info">
+                            <h3>INCUBATEUR - Stage 3 mois</h3>
+                            <p>Développeur Web et Web Mobile</p>
+                            <div class="parcours__timeline">
+                                <span><ion-icon name="calendar"></ion-icon> 2021</span>
+                                <ion-icon name="arrow-down"></ion-icon>
+                            </div>
+                            <div class="parcours__more">
+                                <ul class="parcours__techno">
+                                    <li>React</li>
+                                    <li>React</li>
+                                    <li>React</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="parcours__info">
+                            <h3>INSY2S - Stage 3 mois</h3>
+                            <p>Développeur Web et Web Mobile</p>
+                            <div class="parcours__timeline">
+                                <span><ion-icon name="calendar"></ion-icon> 2021</span>
+                                <ion-icon name="arrow-down"></ion-icon>
+                            </div>
+                            <div class="parcours__more">
+                                <ul class="parcours__techno">
+                                    <li>React</li>
+                                    <li>React</li>
+                                    <li>React</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------ End Parcours ------------>
+                </article>
+            </section>
+            <!------------ End Parcours Section ------------>
+
+
+            <!------------ Contact Section ------------>
+            <section class="" id="contact">
+                <div class="section__title">
+                    <h2>Contact<span>Me&nbsp;contacter</span></h2>
+                </div>
+                <div class="section__smallTitle" href="#">Une proposition ou simplement une question ?</div>
+                <article class="contact__wrapper">
+                    <!------------ Form ------------>
+                    <form id="contact-form">
+                        <input type="hidden" name="contact_number" id="hidden">
+                        <div class="row">
+                            <div class="input-group">
+                                <input type="text" placeholder="Entrez votre nom" name="user_name" id="user_name"
+                                    required>
+                                <label for="user_name">Nom</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" placeholder="Entrez votre email" name="user_email" id="user_email"
+                                    required>
+                                <label for="user_email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-group">
+                                <textarea name="message" placeholder="Entrez votre message" id="message"
+                                    required></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                        </div>
+                        <button id="submit" type="submit" data-content="Envoyer">Envoyer</button>
+                        <!-- <input type="submit" value="Envoyer" id="submit"> -->
+                        <div class="message">
+
+                        </div>
+                    </form>
+                    <!------------ End Form ------------>
+                </article>
+            </section>
+            <!------------ End Contact Section ------------>
+
+
+            <footer class="footer__page hide-lg">
+                <div class="footer__goUp"><a href="#home"><ion-icon name="arrow-up"></ion-icon></a></div>
+                <div class="footer__social">
+                    <!-- <p class="home__contact">Contact</p> -->
+                    <div class="footer__links">
+                        <ion-icon class="home__link" name="logo-github"></ion-icon>
+                        <ion-icon class="home__link" name="logo-linkedin"></ion-icon>
+                        <ion-icon class="home__link" name="mail"></ion-icon>
+                        <ion-icon class="home__link" name="newspaper"></ion-icon>
                     </div>
                 </div>
-            </section>
-            <section></section>
-            <section></section>
+            </footer>
+
+
         </main>
     </div>
 
