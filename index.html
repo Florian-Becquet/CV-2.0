@@ -3,18 +3,100 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- <link rel="stylesheet" href="pointer.css"> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/gold.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 
 <body>
+
     <!------------ Container 1280px ------------>
     <div class="container">
+        <div class="mobile__menu hide__lg">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
         <!------------ Header Home Page ------------>
         <header class="home__header">
-            <!------------ Nav ------------>
+
+            <!------------ Nav Mobile Screen------------>
+            <nav class="nav hide__lg">
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link" href="#home">
+                                <div class="nav__left">
+                                    <ion-icon class="icon__menu" name="home-outline"></ion-icon>
+                                    <p>Accueil</p>
+                                </div>
+                                <div class="nav__right">
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#projets">
+                                <div class="nav__left">
+                                    <ion-icon class="icon__menu" name="code-outline"></ion-icon>
+                                    <p>Projets</p>
+                                </div>
+                                <div class="nav__right">
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#about">
+                                <div class="nav__left">
+                                    <ion-icon class="icon__menu" name="person-outline"></ion-icon>
+                                    <p>A propos</p>
+                                </div>
+                                <div class="nav__right">
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#parcours">
+                                <div class="nav__left">
+                                    <ion-icon class="icon__menu" name="ribbon-outline"></ion-icon>
+                                    <p>Parcours</p>
+                                </div>
+                                <div class="nav__right">
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#competences">
+                                <div class="nav__left">
+                                    <ion-icon class="icon__menu" name="construct-outline"></ion-icon>
+                                    <p>Compétences</p>
+                                </div>
+                                <div class="nav__right">
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#contact">
+                                <div class="nav__left">
+                                    <ion-icon class="icon__menu" name="chatbox-ellipses-outline"></ion-icon>
+                                    <p>Contact</p>
+                                </div>
+                                <div class="nav__right">
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!------------ End Nav Mobile Screen------------>
+            <!------------ Nav Large Screen------------>
             <nav class="home__nav hide__mobile">
                 <ul>
                     <li>
@@ -59,12 +141,12 @@
                     <p>Mode</p>
                 </div>
             </nav>
-            <!------------ End Nav ------------>
+            <!------------ End Nav Large Screen------------>
             <!------------ Title Home Page ------------>
             <section class="home__description" id="home">
-                <h2>Florian Becquet</h2>
-                <h1>Développeur Full&nbsp;-&nbsp;Stack<span>.</span></h1>
-                <h3>A la recherche d'une alternance dans ce domaine</h3>
+                <h2 class="reveal100">Florian Becquet</h2>
+                <h1 class="reveal300">Développeur Full&nbsp;-&nbsp;Stack<span>.</span></h1>
+                <h3 class="reveal500">A la recherche d'une alternance dans ce domaine</h3>
             </section>
             <!------------ End Title Home Page ------------>
         </header>
@@ -83,38 +165,40 @@
                 <!------------ End Titles For Every Sections ------------>
                 <article class="projet__wrapper">
                     <!------------ Projets Items ------------>
-                    <div class="projet__item">
+                    <div class="projet__item reveal100">
                         <div class="projet__img">
                             <img src="Hello-rafiki.svg" />
                             <figcaption data-content="TODOList">TODO LIST</figcaption>
                         </div>
                         <div class="projet__description">
-                            <p><span>Statut:</span> En cours</p>
-                            <p><span>Rôle:</span> Développeur Web</p>
-                            <span>Technos:</span>
+                            <p>En cours de développement</p>
+                            <p>Développement Full-Stack</p>
                             <ul>
                                 <li>React</li>
                                 <li>React</li>
                                 <li>React</li>
                             </ul>
-                            <p class="demo">Démo <ion-icon name="arrow-forward-outline"></ion-icon></p>
+                            <a href="#" class="demo">
+                                <p>Démo <ion-icon name="arrow-forward-outline"></ion-icon></p>
+                            </a>
                         </div>
                     </div>
-                    <div class="projet__item">
+                    <div class="projet__item reveal300">
                         <div class="projet__img">
                             <img src="Hello-rafiki.svg" />
                             <figcaption data-content="TODOList">TODO LIST</figcaption>
                         </div>
                         <div class="projet__description">
-                            <p><span>Statut:</span>En cours</p>
-                            <p><span>Rôle:</span>Développeur Web</p>
-                            <span>Technos:</span>
+                            <p>En cours de développement</p>
+                            <p>Développement Full-Stack</p>
                             <ul>
                                 <li>React</li>
                                 <li>React</li>
                                 <li>React</li>
                             </ul>
-                            <p class="demo">Démo <ion-icon name="arrow-forward-outline"></ion-icon></p>
+                            <a href="#" class="demo">
+                                <p>Démo <ion-icon name="arrow-forward-outline"></ion-icon></p>
+                            </a>
                         </div>
                     </div>
                     <!------------ End Projets Items ------------>
@@ -135,8 +219,7 @@
                 <article class="presentation__wrapper">
                     <!------------ Presentation ------------>
                     <div class="presentation__globale">
-                        <p>Je suis Florian, <strong class="noStyle"><i class="noStyle">Développeur Web
-                                    Junior</i></strong> et c'est ici que je vous parle de mon parcours.</p>
+                        <p>Je suis Florian, <strong class="noStyle"><i class="noStyle">Développeur Web</i></strong> et c'est ici que je vous parle de mon parcours.</p>
                         <hr />
                         <p> J'ai suivi une formation &nbsp;<strong
                                 class="yesStyle"><i>Développement&nbsp;Web&nbsp;et&nbsp;Web&nbsp;Mobile</i></strong>,
@@ -175,7 +258,7 @@
                         name="arrow-forward-outline"></ion-icon></a>
                 <article class="parcours__wrapper">
                     <!------------ Parcours ------------>
-                    <div class="parcours__item">
+                    <div class="parcours__item reveal100">
                         <h3> <ion-icon name="school"></ion-icon> Formations </h3>
                         <div class="parcours__info">
                             <h3>LaCapsule - 3 mois</h3>
@@ -192,7 +275,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="parcours__info">
+                        <div class="parcours__info reveal100">
                             <h3>AFPA - 9 mois</h3>
                             <p>Développeur Web et Web Mobile</p>
                             <div class="parcours__timeline">
@@ -207,7 +290,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="parcours__info">
+                        <div class="parcours__info reveal100">
                             <h3>M2i - 3 mois</h3>
                             <p>Développeur Web et Web Mobile</p>
                             <div class="parcours__timeline">
@@ -223,7 +306,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="parcours__item">
+                    <div class="parcours__item reveal100">
                         <h3> <ion-icon name="school"></ion-icon> Expériences </h3>
                         <div class="parcours__info">
                             <h3>INCUBATEUR - Stage 3 mois</h3>
@@ -240,7 +323,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="parcours__info">
+                        <div class="parcours__info reveal100">
                             <h3>INSY2S - Stage 3 mois</h3>
                             <p>Développeur Web et Web Mobile</p>
                             <div class="parcours__timeline">
@@ -267,7 +350,7 @@
                 <div class="section__title">
                     <h2>Contact<span>Me&nbsp;contacter</span></h2>
                 </div>
-                <div class="section__smallTitle" href="#">Une proposition ou simplement une question ?</div>
+                <div class="section__smallTitle" href="#">Une proposition ou une question ?</div>
                 <article class="contact__wrapper">
                     <!------------ Form ------------>
                     <form id="contact-form">
@@ -322,7 +405,7 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="script.js"></script>
-    <!-- <script src="pointer.js"></script> -->
+
 </body>
 
 </html>

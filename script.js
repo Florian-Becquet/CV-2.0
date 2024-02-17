@@ -58,7 +58,8 @@ timeline.forEach(info => {
 
 let sections = document.querySelectorAll('section');
 // console.log(sections);
-let navLinks = document.querySelectorAll('nav ul li a');
+let navLinks = document.querySelectorAll('nav.hide__mobile ul li a');
+let navLinksMobile = document.querySelectorAll('nav.hide__lg ul li a');
 
 
 
@@ -83,8 +84,107 @@ window.onscroll = () => {
             navLinks.forEach(links => {
                 links.classList.remove('active');
                 console.log();
-                document.querySelector('nav li a[href*=' + id + ']').classList.add('active');
+                document.querySelector('nav.hide__mobile li a[href*=' + id + ']').classList.add('active');
+            });
+            navLinksMobile.forEach(links => {
+                links.classList.remove('active');
+                console.log();
+                document.querySelector('nav.hide__lg li a[href*=' + id + ']').classList.add('active');
             });
         };
     });
 };
+
+
+ScrollReveal().reveal('.reveal100', { delay: 100 });;
+ScrollReveal().reveal('.reveal300', { delay: 300 });;
+ScrollReveal().reveal('.reveal500', { delay: 500 });;
+
+
+
+
+
+// Constantes
+const navButton = document.querySelector('.mobile__menu');
+const nav = document.querySelector('.nav');
+const toggleColor = document.querySelector('#color');
+const btnColor = document.querySelector('.style__theme');
+const darkBtn = document.querySelector('#dark')
+const navItems = document.querySelectorAll('.nav__link')
+
+// Trigger Mobile Menu
+function toggleMobileMenu() {
+    nav.classList.toggle('nav__show');
+}
+navButton.addEventListener('click', toggleMobileMenu);
+
+navItems.forEach(navItem => {
+    navItem.addEventListener('click', function() {
+        navItem.classList.remove('active')
+        this.classList.add('active')
+        toggleMobileMenu();
+    })
+    
+})
+
+
+function getStoredTheme() {
+    return localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+}
+function toggleDayNight() {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const targetTheme = (currentTheme === "light") ? "dark" : "light";
+    document.documentElement.setAttribute('data-theme', targetTheme);
+    localStorage.setItem('theme', targetTheme);
+}
+
+// Fonction pour changer la couleur et mettre à jour les éléments visuels
+
+// Initialisation du thème et de la couleur au chargement de la page
+const storedTheme = getStoredTheme();
+
+document.documentElement.setAttribute('data-theme', storedTheme);
+document.querySelector('.home__switch').addEventListener('click', toggleDayNight);
+
+
+
+
+
+// Formulaire d'envoi contact
+// Check https://www.emailjs.com/
+$(document).ready(function () {
+    $('#contact-form').submit(function (e) {
+        const form = document.querySelector('form[id="contact-form"]');
+        const username = form.elements['user_name'].value;
+        const userMail = form.elements['user_email'].value;
+        const message = form.elements['message'].value;
+        console.log(message);
+        e.preventDefault();
+        var data = {
+            service_id: 'service_4yilhyf',
+            template_id: 'template_3ohtp4i',
+            user_id: 'nwkRq3DJ8L8UITGS0',
+            template_params: {
+                from_email: userMail,
+                from_name: username,
+                to_name: 'Florian',
+                message: message
+            }
+        };
+        $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+            type: 'POST',
+            data: JSON.stringify(data),
+            contentType: 'application/json'
+        }).done(function () {
+            $('#contact-form')[0].reset();
+            $('.message').html('Merci pour votre message ! J\'y répondrai dès que possible !') 
+            $('.message').addClass('active');
+            setTimeout(function(){
+                $('.message').removeClass('active');
+            }, 5000);
+
+        }).fail(function (error) {
+            alert('Oops… ' + JSON.stringify(error));
+        })
+    })
+})
