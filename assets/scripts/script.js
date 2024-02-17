@@ -1,10 +1,8 @@
-var homeSectionHeight = document.querySelector('.home__header').offsetHeight;
-var homeNav = document.querySelector('.home__nav');
+const homeSectionHeight = document.querySelector('.home__header').offsetHeight;
+const homeNav = document.querySelector('.home__nav');
 
 
 // When the user scrolls down from the top of the document, resize the header's size
-;
-
 function scrollFunction() {
     if (document.body.scrollTop > (homeSectionHeight / 2) || document.documentElement.scrollTop > (homeSectionHeight / 2)) {
         homeNav.classList.add('scroll')
@@ -13,23 +11,12 @@ function scrollFunction() {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 const timeline = document.querySelectorAll('.parcours__timeline');
 const icons = document.querySelectorAll('.parcours__timeline > ion-icon');
 const parcoursInfo = document.querySelectorAll('.parcours__info')
 const parcoursMore = document.querySelectorAll('.parcours__more')
 
-// Permet les animations de la section "Parcours"
+// Permet le déroulement de la section "Parcours"
 timeline.forEach(info => {
     info.addEventListener('click', function () {
         if (this.children[1].getAttribute("name") === "arrow-down") {
@@ -57,12 +44,10 @@ timeline.forEach(info => {
 
 
 let sections = document.querySelectorAll('section');
-// console.log(sections);
 let navLinks = document.querySelectorAll('nav.hide__mobile ul li a');
 let navLinksMobile = document.querySelectorAll('nav.hide__lg ul li a');
 
-
-
+// Permet d'ajouter la classe 'active' au bon menu en mode Mobile
 function activeMenuOnClick() {
     navLinks.forEach(navLink => {
         navLink.addEventListener('click', function() {
@@ -73,6 +58,7 @@ function activeMenuOnClick() {
 }
 activeMenuOnClick();
 
+// Permet d'automatiquement mettre en valeur le menu sur lequel on se trouve en mode Mobile ou Large
 window.onscroll = () => {
     scrollFunction();
     sections.forEach(section => {
@@ -81,11 +67,13 @@ window.onscroll = () => {
         let height = section.offsetHeight;
         let id = section.getAttribute('id');
         if (top >= offset && top < offset + height) {
+            // Mode Large
             navLinks.forEach(links => {
                 links.classList.remove('active');
                 console.log();
                 document.querySelector('nav.hide__mobile li a[href*=' + id + ']').classList.add('active');
             });
+            // Mode Mobile
             navLinksMobile.forEach(links => {
                 links.classList.remove('active');
                 console.log();
@@ -95,13 +83,10 @@ window.onscroll = () => {
     });
 };
 
-
+// Différents temps d'animations au scroll de la page
 ScrollReveal().reveal('.reveal100', { delay: 100 });;
 ScrollReveal().reveal('.reveal300', { delay: 300 });;
 ScrollReveal().reveal('.reveal500', { delay: 500 });;
-
-
-
 
 
 // Constantes
@@ -128,9 +113,12 @@ navItems.forEach(navItem => {
 })
 
 
+// Permet de savoir le thème au lancement de la page
 function getStoredTheme() {
     return localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 }
+
+// Permet de trigger le dark ou light mode
 function toggleDayNight() {
     const currentTheme = document.documentElement.getAttribute("data-theme");
     const targetTheme = (currentTheme === "light") ? "dark" : "light";
@@ -138,16 +126,12 @@ function toggleDayNight() {
     localStorage.setItem('theme', targetTheme);
 }
 
-// Fonction pour changer la couleur et mettre à jour les éléments visuels
 
 // Initialisation du thème et de la couleur au chargement de la page
 const storedTheme = getStoredTheme();
 
 document.documentElement.setAttribute('data-theme', storedTheme);
 document.querySelector('.home__switch').addEventListener('click', toggleDayNight);
-
-
-
 
 
 // Formulaire d'envoi contact
