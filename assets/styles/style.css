@@ -1149,8 +1149,12 @@ article {
 @media screen and (max-width: 468px) {
     section .section__title h2 span {
         font-size: 34px;
-        top: -4px;
+        top: -9px;
         /* color: red; */
+    }
+
+    section .section__title h2 {
+        font-size : 20px;
     }
 
     .parcours__wrapper .parcours__item .parcours__info {
