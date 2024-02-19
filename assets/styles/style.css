@@ -357,7 +357,7 @@ nav.hide__lg .home .home__data::before {
 .home__header .home__description h1 {
     color: var(--secondary);
     font-size: var(--fs-xxl);
-    -webkit-text-stroke: 3pt var(--text);
+    -webkit-text-stroke: 2.2pt var(--text);
 }
 
 .home__header .home__description h1 span {
