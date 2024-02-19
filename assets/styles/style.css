@@ -1053,7 +1053,7 @@ article {
     .parcours__wrapper {
         display: flex;
         flex-direction: column;
-        width: 80%;
+        width: 95%;
         font-size: var(--fs-sm)
     }
 
