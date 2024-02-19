@@ -1090,6 +1090,10 @@ article {
         color: var(--text);
         font-size: var(--fs-base);
     }
+
+    .home__header .home__description h1 {
+        -webkit-text-stroke: 1.8pt var(--text);
+    }
 }
 
 
