@@ -1,7 +1,6 @@
 const homeSectionHeight = document.querySelector('.home__header').offsetHeight;
 const homeNav = document.querySelector('.home__nav');
 
-
 // When the user scrolls down from the top of the document, resize the header's size
 function scrollFunction() {
     if (document.body.scrollTop > (homeSectionHeight / 2) || document.documentElement.scrollTop > (homeSectionHeight / 2)) {
@@ -11,9 +10,13 @@ function scrollFunction() {
     }
 }
 
+// Tous les blocs timeline - Bloc contenant la date et la flèche servant au déroulement
 const timeline = document.querySelectorAll('.parcours__timeline');
+// Toutes les icons flèche down - Bloc contenant la flèche du projet
 const icons = document.querySelectorAll('.parcours__timeline > ion-icon');
+// Tous les blocs info - Bloc contenant l'entièreté d'un projet
 const parcoursInfo = document.querySelectorAll('.parcours__info')
+// Tous les blocs more - Bloc menu déroulant d'un projet
 const parcoursMore = document.querySelectorAll('.parcours__more')
 
 // Permet le déroulement de la section "Parcours"
@@ -35,7 +38,6 @@ timeline.forEach(info => {
             this.parentNode.classList.remove('show__more-info')
             this.nextElementSibling.classList.remove('parcours__more__show');
         }
-
         const arrow = (this.children[1].getAttribute("name") === "arrow-down") ? "arrow-up" : "arrow-down";
         this.children[1].setAttribute("name", arrow)
     })
@@ -131,7 +133,8 @@ function toggleDayNight() {
 const storedTheme = getStoredTheme();
 
 document.documentElement.setAttribute('data-theme', storedTheme);
-document.querySelector('.home__switch').addEventListener('click', toggleDayNight);
+document.querySelector('.home__switch.hide__lg').addEventListener('click', toggleDayNight);
+document.querySelector('.home__switch.lg').addEventListener('click', toggleDayNight);
 
 
 // Formulaire d'envoi contact
