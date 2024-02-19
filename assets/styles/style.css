@@ -82,6 +82,7 @@ body {
 .home__header {
     height: 100vh;
     position: relative;
+    background: url('http://api.thumbr.it/whitenoise-361x370.png?background=#B2C0B3ff&noise=ffffff&density=50&opacity=10')!important;
 }
 
 
@@ -845,6 +846,7 @@ article {
 #contact-form .row input::placeholder,
 #contact-form .row textarea::placeholder {
     color: var(--text);
+    font-family: 'Amethysta';
 }
 
 #contact-form .row input:focus::placeholder,
