@@ -122,7 +122,6 @@ nav.hide__lg {
     transition: transform 0.3s;
     z-index: 99;
     background-color: var(--background);
-
 }
 
 nav.hide__lg.nav__show {
@@ -305,7 +304,7 @@ nav.hide__lg .home .home__data::before {
     border: 1px solid var(--text);
     border-top: none;
     box-shadow: none;
-    transition: border 0s;
+    transition: transform 0.3s, border 0s;
 }
 
 .home__header .home__nav.scroll ul li a {
@@ -368,6 +367,25 @@ nav.hide__lg .home .home__data::before {
 .home__header .home__description h3 {
     font-size: var(--fs-md);
     margin-top: var(--fs-xl);
+}
+
+.home__header .home__description a {
+    margin-top : var(--fs-lg);
+    text-decoration: none;
+    color : var(--text);
+    border-radius : 15px;
+    border : 2px solid var(--accent);
+    padding : 15px;
+    transition : background-color .3s;
+    display : flex;
+    align-items: center;
+    gap : 0.5rem;
+}
+
+.home__header .home__description a:hover {
+    border : 2px solid transparent;
+    background-color: var(--accent);
+    transition : background-color .3s;
 }
 
 /*============== HOME SOCIAL ==============*/
