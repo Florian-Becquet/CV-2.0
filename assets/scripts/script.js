@@ -98,9 +98,12 @@ const toggleColor = document.querySelector('#color');
 const btnColor = document.querySelector('.style__theme');
 const darkBtn = document.querySelector('#dark')
 const navItems = document.querySelectorAll('.nav__link')
+const iconMobileMenu = document.querySelector('.mobile__menu ion-icon')
 
 // Trigger Mobile Menu
 function toggleMobileMenu() {
+    // Change icon between Close and Burger
+    iconMobileMenu.getAttribute('name') === "menu-outline" ? iconMobileMenu.setAttribute('name', 'close-outline') : iconMobileMenu.setAttribute('name', 'menu-outline')
     nav.classList.toggle('nav__show');
 }
 navButton.addEventListener('click', toggleMobileMenu);

@@ -1176,6 +1176,11 @@ article {
         margin: auto;
         margin-bottom: var(--fs-sm);
     }
+
+    .home__header .home__description h3 {
+        margin-left : 10px;
+        margin-right : 10px;
+    }
 }
 
 
@@ -1191,10 +1196,6 @@ article {
 
     .parcours__wrapper .parcours__item .parcours__info {
         height: 90px;
-    }
-
-    .home__header .home__description h3 {
-        margin-left : 5px;
     }
 
     .projet__wrapper .projet__item {
