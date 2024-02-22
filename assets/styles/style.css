@@ -14,11 +14,7 @@ h5 {
     font-weight: 700;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
+
 
 :root,
 html[data-theme="light"] {
@@ -63,6 +59,11 @@ html {
     font-size: 100%;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
 
 *,
 ::before,
@@ -560,6 +561,7 @@ article {
 .projet__wrapper .projet__item .projet__description .demo p {
     display: flex;
     align-items: center;
+    text-decoration: line-through;
 }
 
 .projet__wrapper .projet__item .projet__description .demo ion-icon {
@@ -577,6 +579,7 @@ article {
 
 .projet__wrapper .projet__item .projet__img img {
     object-fit: cover;
+    object-position: 50% 50%;
     height: 100%;
     width: 100%;
 }
@@ -611,6 +614,7 @@ article {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.3s, opacity 0.3s;
+    font-size: var(--fs-sm);
 }
 
 .projet__wrapper .projet__item .projet__img:hover .projet__hover{
@@ -632,7 +636,8 @@ article {
     border: 2px solid transparent;
     width : fit-content;
     font-size: var(--fs-sm);
-    margin : 10px 5px;
+    margin : 8px;
+    margin-left : 0;
 }
 
 .projet__wrapper .projet__item .projet__img .projet__hover ul li:nth-of-type(odd) {
