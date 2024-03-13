@@ -189,20 +189,20 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   addAnimation();
 }
 
-function addAnimation() {
-    // add data-animated="true" to `.scroller`
-    scrollers.setAttribute("data-animated", true);
+// function addAnimation() {
+//     // add data-animated="true" to `.scroller`
+//     scrollers.setAttribute("data-animated", true);
 
-    // Make an array from the elements within `.scroller-inner`
-    const scrollerInner = scrollers.querySelector(".scroller__inner");
-    const scrollerContent = Array.from(scrollerInner.children);
+//     // Make an array from the elements within `.scroller-inner`
+//     const scrollerInner = scrollers.querySelector(".scroller__inner");
+//     const scrollerContent = Array.from(scrollerInner.children);
 
-    // For each item in the array, clone it
-    // add aria-hidden to it
-    // add it into the `.scroller-inner`
-    scrollerContent.forEach((item) => {
-      const duplicatedItem = item.cloneNode(true);
-      duplicatedItem.setAttribute("aria-hidden", true);
-      scrollerInner.appendChild(duplicatedItem);
-    });
-}
+//     // For each item in the array, clone it
+//     // add aria-hidden to it
+//     // add it into the `.scroller-inner`
+//     scrollerContent.forEach((item) => {
+//       const duplicatedItem = item.cloneNode(true);
+//       duplicatedItem.setAttribute("aria-hidden", true);
+//       scrollerInner.appendChild(duplicatedItem);
+//     });
+// }
