@@ -526,6 +526,14 @@ article {
     position: relative;
 }
 
+.projet__wrapper .projet__item .projet__description a {
+    text-decoration: none;
+    color: var(--text);
+    text-decoration: underline;
+    display: block;
+    margin-top: 15px;
+}
+
 .projet__wrapper .projet__item .projet__description ul {
     display: flex;
     flex-wrap: wrap;
@@ -894,6 +902,7 @@ article {
     padding-inline: 0;
     list-style: none;
 }
+
 .tag-list li {
     padding: 0.5rem;
     background: var(--clr-primary-400);
@@ -902,6 +911,7 @@ article {
     background-color: var(--text);
     color: var(--background);
 }
+
 /*============== END AUTO SCROLL TECHNO ==============*/
 
 
